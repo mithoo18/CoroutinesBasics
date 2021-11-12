@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         btnLoadImage.setOnClickListener {
             //IO THREAD
-            CoroutineScope(Dispatchers.Main).launch {
+            CoroutineScope(Dispatchers.IO).launch {
                 try{
                     Log.d("MyTag", "onCreate: ThreadName: ${Thread.currentThread().name}")
                     val url =  URL("https://i.redd.it/bfc0pz8qdji61.jpg")
